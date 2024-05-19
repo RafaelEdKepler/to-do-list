@@ -1,0 +1,58 @@
+.taskContainer {
+  width: 46.125rem;
+  min-height: 4.5rem;
+
+  display: flex;
+  align-items: flex-start;
+
+  border-radius: 8px;
+  background-color: var(--gray-500);
+
+  padding: 1rem;
+}
+
+.taskStatus {
+  color: var(--blue);
+  margin-right: 1rem;
+}
+
+.taskInformation {
+  line-height: 1.4;
+  color: var(--gray-100);
+}
+
+.deleteTaskButton {
+  color: var(--gray-300);
+  background: transparent;
+  border: 0;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.deleteTaskButton:hover {
+  animation: tremer 2s;
+  animation-iteration-count: 4;
+  color: var(--danger);
+}
+
+@keyframes tremer {
+  0% {
+    margin-left: 0;
+  }
+
+  25% {
+    margin-left: 7px;
+  }
+
+  50% {
+    margin-left: 0;
+  }
+
+  75% {
+    margin-left: -7px;
+  }
+
+  100% {
+    margin-left: 0;
+  }
+}

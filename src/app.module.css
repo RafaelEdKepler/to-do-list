@@ -1,0 +1,109 @@
+.appContainer {
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+}
+
+.inputContainer {
+  margin-top: -2rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.inputContainer>input {
+  width: 39.875rem;
+  height: 3.375rem;
+
+  border-radius: 8px;
+  border: 0;
+  background-color: var(--gray-500);
+  color: var(--gray-300);
+
+  padding: 16px;
+}
+
+.inputContainer button {
+  height: 3.25rem;
+  width: 5.625rem;
+
+  background-color: var(--blue-dark);
+  border-radius: 8px;
+  border: 0;
+
+  color: var(--gray-100);
+
+  transition: 0.2s;
+}
+
+.inputContainer button:hover {
+  cursor: pointer;
+  background-color: var(--blue);
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.tasksInfoContainer {
+  width: 46rem;
+
+  margin-top: 4rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.tasksInfoContainer div {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.tasksInfoContainer div:first-child strong {
+  color: var(--blue);
+}
+
+.tasksInfoContainer div span {
+  background-color: var(--gray-400);
+  width: 25px;
+  height: 19px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  border-radius: 999px;
+  padding: 2px 8px;
+}
+
+.tasksInfoContainer div:last-child strong {
+  color: var(--purple);
+}
+
+.taskBoardContainer {
+  width: 46rem;
+  height: 15.25rem;
+
+  margin-top: 1.5rem;
+  display: flex;
+
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.taskBoardContainer img {
+  width: 3.5rem;
+  height: 3.5rem;
+  margin-bottom: 1rem;
+}
+
+.taskBoardContainer>span,
+.taskBoardContainer>strong {
+  line-height: 1.4;
+  color: var(--gray-300);
+}
