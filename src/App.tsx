@@ -6,7 +6,7 @@ import Clipboard from './assets/Clipboard.svg';
 import styles from "./app.module.css";
 import './global.css';
 import { Task } from './components/task';
-import { ChangeEvent, useState } from 'react';
+import { ChangeEvent, KeyboardEventHandler, useState } from 'react';
 
 interface TasksInterface {
   id: number;
@@ -47,12 +47,19 @@ function App() {
     return tasks.filter((task) => task.concluded).length;
   }
 
+  const handleConfirm = (event: React.KeyboardEvent) => {
+    console.log(event)
+    if (event.code == 'Enter') {
+      handleCreateNewTask();
+    }
+  }
+
   return (
     <>
       <Header />
       <div className={styles.appContainer}>
         <div className={styles.inputContainer}>
-          <input value={newTaskText} onChange={handleNewTaskText} placeholder='Adicione uma nova tarefa' />
+          <input value={newTaskText} onKeyDown={handleConfirm} onChange={handleNewTaskText} placeholder='Adicione uma nova tarefa' />
           <button type='button' onClick={handleCreateNewTask}>
             <div className={styles.buttonContainer}>
               <span>Criar</span>

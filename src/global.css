@@ -37,3 +37,13 @@ button {
   font-size: 0.875rem;
   color: var(--gray-100);
 }
+
+@media (max-width:1020px) {
+
+  body,
+  input,
+  textarea,
+  button {
+    font-size: 0.75rem;
+  }
+}

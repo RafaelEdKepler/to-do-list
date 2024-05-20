@@ -82,3 +82,11 @@
     transform: rotate(0deg)
   }
 }
+
+@media (max-width: 1020px) {
+
+  .taskContainer,
+  .taskContainerConcluded {
+    width: 19.125rem;
+  }
+}

@@ -23,6 +23,8 @@
   padding: 16px;
 }
 
+
+
 .inputContainer button {
   height: 3.25rem;
   width: 5.625rem;
@@ -105,4 +107,30 @@
 .taskBoardContainer>strong {
   line-height: 1.4;
   color: var(--gray-300);
+}
+
+@media (max-width: 1020px) {
+  .inputContainer>input {
+    width: 19.875rem;
+  }
+
+  .inputContainer button {
+    display: none;
+  }
+
+  .tasksInfoContainer {
+    width: 19.875rem;
+    margin-top: 1rem;
+  }
+
+  .tasksInfoContainer strong,
+  .tasksInfoContainer span {
+    font-size: 0.75rem;
+  }
+
+  .taskBoardContainer {
+    width: 26rem;
+    margin-top: 1rem;
+    min-height: auto;
+  }
 }
