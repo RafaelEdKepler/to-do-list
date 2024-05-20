@@ -43,13 +43,12 @@ function App() {
     setTasks([...tasksArray]);
   }
 
-  const constConcludedTasks = () => {
+  const contConcludedTasks = () => {
     return tasks.filter((task) => task.concluded).length;
   }
 
-  const handleConfirm = (event: React.KeyboardEvent) => {
-    console.log(event)
-    if (event.code == 'Enter') {
+  const handleIfConfirmed = (event: React.KeyboardEvent) => {
+    if (event.key == 'Enter') {
       handleCreateNewTask();
     }
   }
@@ -59,7 +58,12 @@ function App() {
       <Header />
       <div className={styles.appContainer}>
         <div className={styles.inputContainer}>
-          <input value={newTaskText} onKeyDown={handleConfirm} onChange={handleNewTaskText} placeholder='Adicione uma nova tarefa' />
+          <input
+            value={newTaskText}
+            onKeyDown={handleIfConfirmed}
+            onChange={handleNewTaskText}
+            placeholder='Adicione uma nova tarefa'
+          />
           <button type='button' onClick={handleCreateNewTask}>
             <div className={styles.buttonContainer}>
               <span>Criar</span>
@@ -74,7 +78,7 @@ function App() {
           </div>
           <div>
             <strong>Concluídas</strong>
-            <span>{constConcludedTasks()} de {tasks.length}</span>
+            <span>{contConcludedTasks()} de {tasks.length}</span>
           </div>
         </div>
         <div className={styles.taskBoardContainer}>
