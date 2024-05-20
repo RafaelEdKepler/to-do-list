@@ -6,7 +6,7 @@ import Clipboard from './assets/Clipboard.svg';
 import styles from "./app.module.css";
 import './global.css';
 import { Task } from './components/task';
-import { ChangeEvent, KeyboardEventHandler, useState } from 'react';
+import { ChangeEvent, useState } from 'react';
 
 interface TasksInterface {
   id: number;
