@@ -67,7 +67,6 @@
 
 .tasksInfoContainer div span {
   background-color: var(--gray-400);
-  width: 25px;
   height: 19px;
 
   display: flex;
@@ -84,9 +83,9 @@
 
 .taskBoardContainer {
   width: 46rem;
-  height: 15.25rem;
+  min-height: 15.25rem;
 
-  margin-top: 1.5rem;
+  margin: 1.5rem 0;
   display: flex;
 
 

@@ -1,25 +1,40 @@
-import { Circle, Trash } from "phosphor-react";
+import { CheckCircle, Circle, Trash } from "phosphor-react";
 import styles from "./task.module.css";
 
 interface TaskProps {
+  id: number,
   content: string,
-  concluded: boolean
+  concluded: boolean,
+  onConcludeATask: (id: number) => void,
+  onDeleteATask: (id: number) => void
 }
 
-export function Task({ content, concluded }: TaskProps) {
+export function Task({ id, content, concluded, onConcludeATask, onDeleteATask }: TaskProps) {
   return (
-    <div className={styles.taskContainer}>
-      <div className={styles.taskStatus}>
-        <Circle width={24} height={24} />
+    <div className={!concluded ? styles.taskContainer : styles.taskContainerConcluded}>
+      <div
+        className={!concluded ? styles.taskStatus : styles.taskStatusConcluded}
+        onClick={() => onConcludeATask(id)}
+      >
+        {!concluded ? (
+          <Circle width={24} height={24} />
+        ) : (
+          <CheckCircle width={24} height={24} />
+        )}
       </div>
-      <span className={styles.taskInformation}>
+      <span
+        className={!concluded ? styles.taskInformation : styles.taskInformationConcluded}
+        onClick={() => onConcludeATask(id)}
+      >
         {content}
       </span>
-      <div className={styles.trembleAnimation}>
-        <button type="button" className={styles.deleteTaskButton}>
-          <Trash width={24} height={24} />
-        </button>
-      </div>
+      <button
+        type="button"
+        className={styles.deleteTaskButton}
+        onClick={() => onDeleteATask(id)}
+      >
+        <Trash width={24} height={24} />
+      </button>
     </div>
   )
 }

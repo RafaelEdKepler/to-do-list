@@ -9,6 +9,7 @@ import { Task } from './components/task';
 import { ChangeEvent, useState } from 'react';
 
 interface TasksInterface {
+  id: number;
   content: string;
   concluded: boolean;
 }
@@ -24,10 +25,26 @@ function App() {
 
   const handleCreateNewTask = () => {
     setTasks([...tasks, {
+      id: tasks.length,
       content: newTaskText,
       concluded: false
     }])
     setNewTaskText("");
+  }
+
+  const concludeATask = (id: number) => {
+    const tasksArray = tasks;
+    tasksArray[id].concluded = !tasksArray[id].concluded;
+    setTasks([...tasksArray]);
+  }
+
+  const deleteATask = (id: number) => {
+    const tasksArray = tasks.filter(task => task.id !== id);
+    setTasks([...tasksArray]);
+  }
+
+  const constConcludedTasks = () => {
+    return tasks.filter((task) => task.concluded).length;
   }
 
   return (
@@ -46,16 +63,23 @@ function App() {
         <div className={styles.tasksInfoContainer}>
           <div>
             <strong>Tarefas Criadas</strong>
-            <span>0</span>
+            <span>{tasks.length}</span>
           </div>
           <div>
             <strong>Concluídas</strong>
-            <span>0</span>
+            <span>{constConcludedTasks()} de {tasks.length}</span>
           </div>
         </div>
         <div className={styles.taskBoardContainer}>
-          {tasks && tasks.length > 0 ? tasks?.map(task => (
-            <Task key={task.content} content={task.content} concluded={task.concluded} />
+          {tasks && tasks.length > 0 ? tasks.map(task => (
+            <Task
+              key={task.id}
+              id={task.id}
+              content={task.content}
+              concluded={task.concluded}
+              onConcludeATask={concludeATask}
+              onDeleteATask={deleteATask}
+            />
           )) : (
             <>
               <img src={Clipboard} alt="Logo de agenda vazia" />
