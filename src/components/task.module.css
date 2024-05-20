@@ -9,13 +9,13 @@
   border-radius: 8px;
   background-color: var(--gray-500);
 
-  border: 1px solid var(--gray-400);
+  outline: 1px solid var(--gray-400);
 
   padding: 1rem;
 }
 
 .taskContainerConcluded {
-  border: none;
+  outline: 1px solid var(--gray-500);
 }
 
 .taskContainer:not(:first-child),
