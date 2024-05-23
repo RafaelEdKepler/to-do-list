@@ -1,30 +1,19 @@
-# React + TypeScript + Vite
+# TO DO List - A aplicação clássica de todo Portifólio DEV.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A aplicação TO DO List foi desenvolvida com o intuito de fixar conhecimentos mais básicos, tais quais criação de projetos, manipulação de estados, princípios de imutabilidade e, claro, absorver mais conhecimento de CSS (Que nunca é demais 😅)
 
-Currently, two official plugins are available:
+Para o desenvolvimento dessa aplicação foram utilizadas as seguintes ferramentas:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Vite (Para criação do projeto)
+- ReactJS (Biblioteca Javascript utilizada para o desenvolvimento)
+- TypeScript (Biblioteca de Tipagem utilizada)
+- Phosphor React (Biblioteca utilizada para Ícones)
+- CSS Modules (Para estilização)
 
-## Expanding the ESLint configuration
+Para instalar e utilizar a aplicação (Caso queira apenas utilizar pode acessar por aqui ➡️ [To Do List](https://to-do-list-orcin-six.vercel.app/)) basta clonar o projeto, rodar o comando
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+`npm install` para instalar todas dependências e `npm run dev` para rodar a aplicação.
 
-- Configure the top-level `parserOptions` property like this:
+Após executada, divirta-se criando, cumprindo e apagando tarefas! Mas apenas durante um refresh 🤣 Futuramente penso em elevar essa funcionalidade adicionando persistência de dados e uma plataforma de login, mas, por hora, é isso!
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+# Obrigado pelo seu tempo!
