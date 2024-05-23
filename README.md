@@ -1,6 +1,6 @@
 # TO DO List - A aplicação clássica de todo Portifólio DEV.
 
-A aplicação TO DO List foi desenvolvida com o intuito de fixar conhecimentos mais básicos, tais quais criação de projetos, manipulação de estados, princípios de imutabilidade e, claro, absorver mais conhecimento de CSS (Que nunca é demais 😅)
+A aplicação TO DO List foi desenvolvida com o intuito de fixar conhecimentos mais básicos, tais quais criação de projetos, gerenciamento de estados, princípios de imutabilidade e, claro, absorver mais conhecimento de CSS (Que nunca é demais 😅)
 
 Para o desenvolvimento dessa aplicação foram utilizadas as seguintes ferramentas:
 
