@@ -22,4 +22,4 @@ Para instalar todas dependências e rodar a aplicação logo em seguida!
 
 Após executada, divirta-se criando, cumprindo e apagando tarefas! Mas apenas durante um refresh 🤣 Futuramente penso em elevar essa funcionalidade adicionando persistência de dados e uma plataforma de login, mas, por hora, é isso!
 
-# Obrigado pelo seu tempo!
+## Obrigado pelo seu tempo!
