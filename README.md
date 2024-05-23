@@ -10,15 +10,15 @@ Para o desenvolvimento dessa aplicação foram utilizadas as seguintes ferrament
 - Phosphor React (Biblioteca utilizada para Ícones)
 - CSS Modules (Para estilização)
 
-Para instalar e utilizar a aplicação (Caso queira apenas utilizar pode acessar por aqui ➡️ [To Do List](https://to-do-list-orcin-six.vercel.app/)) basta clonar o projeto, rodar o comando para instalar todas dependências:
+Caso queira utilizar a ferramenta, ela está disponível aqui ➡️ [To Do List](https://to-do-list-orcin-six.vercel.app/).
+
+Mas caso queira instalar e utilizar a aplicação, podes rodar os comandos:
 
 `npm install`
 
-e
-
 `npm run dev`
 
-para rodar a aplicação.
+Para instalar todas dependências e rodar a aplicação logo em seguida!
 
 Após executada, divirta-se criando, cumprindo e apagando tarefas! Mas apenas durante um refresh 🤣 Futuramente penso em elevar essa funcionalidade adicionando persistência de dados e uma plataforma de login, mas, por hora, é isso!
 
